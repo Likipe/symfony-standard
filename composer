@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ ! -f composer.phar ]
+then
+	echo "Composer not installed installing composer from getcomposer.org...\n"
+	
+	wget http://getcomposer.org/composer.phar
+	
+	echo "Done installing composer.\n"
+fi
+
+php composer.phar $@
